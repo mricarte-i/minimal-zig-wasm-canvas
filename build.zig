@@ -9,8 +9,8 @@ pub fn build(b: *std.Build) void {
     });
 
     const exe = b.addExecutable(.{
-        .name = "checkerboard",
-        .root_source_file = .{ .path = "src/checkerboard.zig" },
+        .name = "checkerboardBuild",
+        .root_source_file = b.path("src/checkerboard.zig"), //.{ .path = "src/checkerboard.zig" },
         .target = target,
         .optimize = .ReleaseSmall,
     });
