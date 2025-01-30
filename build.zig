@@ -1,6 +1,6 @@
 const std = @import("std");
 
-const number_of_pages = 2;
+const number_of_pages = 41;
 
 pub fn build(b: *std.Build) void {
     const target = b.resolveTargetQuery(.{
@@ -9,8 +9,8 @@ pub fn build(b: *std.Build) void {
     });
 
     const exe = b.addExecutable(.{
-        .name = "checkerboardBuild",
-        .root_source_file = b.path("src/checkerboard.zig"), //.{ .path = "src/checkerboard.zig" },
+        .name = "canvasBuild",
+        .root_source_file = b.path("src/canvas.zig"), //.{ .path = "src/checkerboard.zig" },
         .target = target,
         .optimize = .ReleaseSmall,
     });
